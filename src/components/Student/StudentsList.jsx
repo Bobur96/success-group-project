@@ -52,7 +52,7 @@ export default function StudentsList() {
         <div className="row row-grid justify-content-center">
           <div className="col-md-12">
             <div className="job-list__wrapper mb-6">
-              <h3 className="my-4">Students List</h3>
+              <h5 className="my-4 text-center">Students List</h5>
               <div
                 id="header"
                 className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
