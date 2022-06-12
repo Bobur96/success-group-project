@@ -14,3 +14,12 @@ code {
 i, svg{
   cursor: pointer;
 }
+.card-body{
+  background-color: #f8fafb; 
+}
+.invalid-feedback{
+  margin: 0;
+}
+#addform label{
+  font-size: 14px;
+}

@@ -6,11 +6,11 @@ export default function Student() {
   const { studentId, routeChange } = useContext(UserContext);
 
   return (
-    <div className="container">
+    <div className="container mt-4">
       <div className="main-body">
         <div className="row gutters-sm">
           <div className="col-md-4 mb-3">
-            <div className="card py-2 px-3">
+            <div className="card py-4 px-3">
               <div className="card-body">
                 <div className="d-flex flex-column align-items-center text-center">
                   <img
@@ -20,7 +20,7 @@ export default function Student() {
                     width="150"
                   />
                   <div className="mt-3">
-                    <h4>
+                    <h5>
                       <svg
                         className="mb-1 me-1"
                         width="16"
@@ -31,7 +31,7 @@ export default function Student() {
                         <path d="M45.63 79.75L52 81.25v58.5C45 143.9 40 151.3 40 160c0 8.375 4.625 15.38 11.12 19.75L35.5 242C33.75 248.9 37.63 256 43.13 256h41.75c5.5 0 9.375-7.125 7.625-13.1L76.88 179.8C83.38 175.4 88 168.4 88 160c0-8.75-5-16.12-12-20.25V87.13L128 99.63l.001 60.37c0 70.75 57.25 128 128 128s127.1-57.25 127.1-128L384 99.62l82.25-19.87c18.25-4.375 18.25-27 0-31.5l-190.4-46c-13-3-26.62-3-39.63 0l-190.6 46C27.5 52.63 27.5 75.38 45.63 79.75zM359.2 312.8l-103.2 103.2l-103.2-103.2c-69.93 22.3-120.8 87.2-120.8 164.5C32 496.5 47.53 512 66.67 512h378.7C464.5 512 480 496.5 480 477.3C480 400 429.1 335.1 359.2 312.8z" />
                       </svg>
                       {studentId.fullName}
-                    </h4>
+                    </h5>
                     <p className="text-secondary mb-1">
                       <svg
                         className="mb-1 me-1"
@@ -44,7 +44,7 @@ export default function Student() {
                       </svg>
                       {studentId.universityName}
                     </p>
-                    <p className="text-muted font-size-sm">
+                    {/* <p className="text-muted font-size-sm">
                       <svg
                         className="mb-1 me-1"
                         width="16"
@@ -55,7 +55,7 @@ export default function Student() {
                         <path d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z" />
                       </svg>
                       {studentId.faculty}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>

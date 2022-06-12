@@ -3,14 +3,18 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
+  const logOut = () => {
+    localStorage.setItem("user", "");
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <div className="container-fluid">
         <button
           className="navbar-toggler"
           type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -38,6 +42,11 @@ export default function Header() {
                 Students
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="AddStudent">
+                Add Student
+              </NavLink>
+            </li>
           </ul>
         </div>
 
@@ -52,7 +61,7 @@ export default function Header() {
               href="#"
               id="navbarDropdownMenuLink"
               role="button"
-              data-mdb-toggle="dropdown"
+              data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               <i className="fas fa-bell"></i>
@@ -74,11 +83,6 @@ export default function Header() {
                   Another news
                 </a>
               </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
             </ul>
           </div>
           <div className="dropdown">
@@ -87,7 +91,7 @@ export default function Header() {
               href="#"
               id="navbarDropdownMenuAvatar"
               role="button"
-              data-mdb-toggle="dropdown"
+              data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               <img
@@ -113,9 +117,9 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <span onClick={logOut} className="dropdown-item" href="#">
                   Logout
-                </a>
+                </span>
               </li>
             </ul>
           </div>

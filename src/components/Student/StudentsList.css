@@ -100,3 +100,9 @@ body{margin-top:20px;}
 a {
     text-decoration: none !important;
 }
+
+@media screen and (max-width: 768px) {
+    li .text-info{
+        margin: 0 5px;
+    }
+}
