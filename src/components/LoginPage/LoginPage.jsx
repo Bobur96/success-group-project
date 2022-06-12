@@ -27,7 +27,7 @@ export default function LoginPage() {
       .then((r) => {
         console.log(r.data);
         if (r.data.success === true) localStorage.setItem("user", "true");
-        else toast.error("name yoki password xato!");
+        else toast.error("name or password incorrect!");
       });
   };
 
