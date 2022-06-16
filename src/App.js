@@ -11,9 +11,12 @@ function App() {
   const [registerId, setRegisterId] = useState(null);
   const [user, setUser] = useState();
 
+  useEffect(() => {
+    setUser(localStorage.getItem("user"));
+  }, []);
   setInterval(() => {
     setUser(localStorage.getItem("user"));
-  }, 500);
+  }, 100);
 
   return (
     <userRegister.Provider
