@@ -3,20 +3,11 @@ import { UserContext } from "../Main";
 import "./Home.css";
 
 export default function Home() {
-  const { routeChange } = useContext(UserContext);
-
   const change = () => {
     localStorage.setItem("user", "");
   };
 
   return (
-    //       <button
-    //         onClick={() => routeChange("students")}
-    //         className="btn btn-outline-info"
-    //       >
-    //         Students list
-    //       </button>
-
     <div className="home d-flex align-items-center">
       <div
         id="carouselExampleCaptions"

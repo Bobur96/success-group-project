@@ -108,76 +108,75 @@ export default function StudentsList() {
                 </div>
               </div>
 
-              {date.map(
-                (el, i) =>
-                  i < 4 && (
-                    <div
-                      key={el.id}
-                      className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
-                    >
-                      <div className="card-body">
-                        <span className="row justify-content-between align-items-center">
-                          <span className="col-md-4 col-9 color--heading">
-                            <span
-                              id="strong"
-                              className="badge badge-circle background--danger text-white me-2"
-                            >
-                              {el.fullName.slice(0, 2)}
-                            </span>{" "}
-                            {el.fullName}
-                          </span>
-
-                          <span className="d-none d-md-block col-md-4 my-sm-0 color--text">
-                            <i className="fa-solid fa-building-columns"></i>{" "}
-                            {el.universityName}
-                          </span>
-
-                          <span className="d-none d-md-block col-md-2 my-sm-0 color--text">
-                            {el.academicType}
-                          </span>
-
-                          <span className="col-3 col-md-2 text-center color--text">
-                            <ul className="list-unstyled mb-0 d-flex justify-content-evenly">
-                              <li>
-                                <span
-                                  className="text-primary"
-                                  data-toggle="tooltip"
-                                  title="view"
-                                  data-original-title="view"
-                                  onClick={() => showStudent(el.id)}
-                                >
-                                  <i className="far fa-eye"></i>
-                                </span>
-                              </li>
-                              <li>
-                                <span
-                                  className="text-info"
-                                  data-toggle="tooltip"
-                                  title="edit"
-                                  data-original-title="Edit"
-                                  onClick={() => editStudent(el.id)}
-                                >
-                                  <i className="fas fa-pencil-alt"></i>
-                                </span>
-                              </li>
-                              <li>
-                                <span
-                                  className="text-danger"
-                                  data-toggle="tooltip"
-                                  title="delete"
-                                  data-original-title="Delete"
-                                  onClick={() => deleteStudent(el.id)}
-                                >
-                                  <i className="far fa-trash-alt"></i>
-                                </span>
-                              </li>
-                            </ul>
-                          </span>
+              <div id="scroll">
+                {date.map((el, i) => (
+                  <div
+                    key={el.id}
+                    className="card p-0 mb-3 border-0 shadow-sm shadow--on-hover"
+                  >
+                    <div className="card-body">
+                      <span className="row justify-content-between align-items-center">
+                        <span className="col-md-4 col-9 color--heading">
+                          <span
+                            id="strong"
+                            className="badge badge-circle background--danger text-white me-2"
+                          >
+                            {el.fullName.slice(0, 2)}
+                          </span>{" "}
+                          {el.fullName}
                         </span>
-                      </div>
+
+                        <span className="d-none d-md-block col-md-4 my-sm-0 color--text">
+                          <i className="fa-solid fa-building-columns"></i>{" "}
+                          {el.universityName}
+                        </span>
+
+                        <span className="d-none d-md-block col-md-2 my-sm-0 color--text">
+                          {el.academicType}
+                        </span>
+
+                        <span className="col-3 col-md-2 text-center color--text">
+                          <ul className="list-unstyled mb-0 d-flex justify-content-evenly">
+                            <li>
+                              <span
+                                className="text-primary"
+                                data-toggle="tooltip"
+                                title="view"
+                                data-original-title="view"
+                                onClick={() => showStudent(el.id)}
+                              >
+                                <i className="far fa-eye"></i>
+                              </span>
+                            </li>
+                            <li>
+                              <span
+                                className="text-info"
+                                data-toggle="tooltip"
+                                title="edit"
+                                data-original-title="Edit"
+                                onClick={() => editStudent(el.id)}
+                              >
+                                <i className="fas fa-pencil-alt"></i>
+                              </span>
+                            </li>
+                            <li>
+                              <span
+                                className="text-danger"
+                                data-toggle="tooltip"
+                                title="delete"
+                                data-original-title="Delete"
+                                onClick={() => deleteStudent(el.id)}
+                              >
+                                <i className="far fa-trash-alt"></i>
+                              </span>
+                            </li>
+                          </ul>
+                        </span>
+                      </span>
                     </div>
-                  )
-              )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
