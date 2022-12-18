@@ -1,107 +1,101 @@
-import React, { useContext } from "react";
-import { UserContext } from "../Main";
+import React from "react";
+import { useState } from "react";
 import "./Home.css";
 
 export default function Home() {
-  const change = () => {
-    localStorage.setItem("user", "");
-  };
+
+  // const [chartRangeOptions] = useState({
+	// 	theme: "light2",
+	// 	title:{
+	// 	  text: "Average Request Range"
+	// 	},
+	// 	animationEnabled: true,
+	// 	subtitles: [{
+	// 	  text: "Tashkent County, Uzbekistan"
+	// 	}],
+	// 	axisY: {
+	// 	  title: "Request (%)",
+	// 	  suffix: "%"
+	// 	},
+	// 	data: [{
+	// 	  type: "rangeColumn",
+	// 	  indexLabel: "{y[#index]}°",
+	// 	  toolTipContent: "<b>{label}</b><br>Min: {y[0]} % <br/> Max: {y[1]} %",
+	// 	  dataPoints: [
+	// 		{ label: "Jan", y: [48.5,	68.1] },
+	// 		{ label: "Feb", y: [50.3,	69.6] },
+	// 		{ label: "Mar", y: [51.6,	69.8] },
+	// 		{ label: "Apr", y: [54.4,	73.1] },
+	// 		{ label: "May", y: [57.9,	74.5] },
+	// 		{ label: "Jun", y: [61.4,	79.5] },
+	// 		{ label: "Jul", y: [64.6,	83.8] },
+	// 		{ label: "Aug", y: [65.6,	84.8] },
+	// 		{ label: "Sept", y: [64.6,	83.3] },
+	// 		{ label: "Oct", y: [59.9,	79.0] },
+	// 		{ label: "Nov", y: [52.6,	73.2] },
+	// 		{ label: "Dec", y: [48.3,	68.7] }
+	// 	  ]
+	// 	}]
+	// })
+
+  // const [chartOptions] = useState({
+	//   animationEnabled: true,
+	//   title:{
+	// 	text: "Requests Status"
+	//   },
+	//   data: [{
+	// 	type: "doughnut",
+	// 	yValueFormatString: "#,###.##'%'",
+	// 	indexLabel: "{name}",
+	// 	dataPoints: [
+	// 	  { y: 44, name: "Complate" },
+	// 	  { y: 0, name: "" },
+	// 	  { y: 0, name: "" },
+	// 	  { y: 34, name: "new" },
+	// 	  { y: 66, name: "Pending" },
+	// 	  { y: 76, name: "Registered" },
+	// 	  { y: 0, name: "" },
+	// 	]
+	//   }]
+	// })
 
   return (
-    <div className="home d-flex align-items-center">
-      <div
-        id="carouselExampleCaptions"
-        className="carousel slide w-100"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src="https://s3.amazonaws.com/mentoring.redesign/s3fs-public/GettyImages-1150198297.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Success Group img 1</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://chrife.com.gh/wp-content/uploads/2020/06/Innovation-future-technology.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Success Group img 2</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://www.preezie.com/hubfs/addasdas.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Success Group img 3</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+    
+<div class="px-3 py-4 p-sm-4 h-75">
+  <div class="quick_activity_wrap px-0 py-4 px-sm-4">
+    <div class="single_quick_activity">
+      <h4>New</h4>
+      <h3>Count: <span class="counter">56</span></h3>
+      <p>Saved 25%</p>
     </div>
+    <div class="single_quick_activity">
+      <h4>Pending</h4>
+      <h3>Count: <span class="counter">66</span></h3>
+      <p>Saved 25%</p>
+    </div>
+    <div class="single_quick_activity">
+      <h4>Registered</h4>
+      <h3>Count: <span class="counter">76</span></h3>
+      <p>Saved 25%</p>
+    </div>
+    <div class="single_quick_activity">
+      <h4>Complate</h4>
+      <h3>Count: <span class="counter">44</span></h3>
+      <p>Saved 25%</p>
+    </div>
+  </div>
+
+  {/* <div class="row py-5 px-lg-4">
+    <div class="col-md-6 position-relative">
+      <div class="div_canv1"></div>
+      <canvasjs-chart options={chartRangeOptions} styles={{width: '100%', height:'360px'}}></canvasjs-chart>
+    </div>
+
+    <div class="col-md-6 position-relative">
+      <div class="div_canv"></div>
+      <canvasjs-chart options={chartOptions} styles={{width: '100%', height:'360px'}}></canvasjs-chart>
+    </div>
+  </div> */}
+</div>
   );
 }
